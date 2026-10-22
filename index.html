@@ -926,40 +926,6 @@ html>body{padding:0}</style>
   <div class="text-small" id="binary-orbital-changes" aria-live="off"></div>
   <div class="viz-row text-small"><span id="binary-detail" aria-live="off"></span></div>
   <div class="viz-row text-small"><span>Positions in G M/c² · time in G M/c³</span><span>Vectors computed from current state; fixed scale per arrow · bodies enlarged · leading centre-of-mass positions.</span></div>
-  <details id="binary-setup" open>
-    <summary>Spin misalignment, initial conditions, and model assumptions</summary>
-    <h3>What “misaligned spins” means here</h3>
-    <p>The initial canonical orbital angular momentum is J₀ = r₀ × p₀. The initial x–y plane is perpendicular to J₀, and +z points along J₀. The spin tilt θₐ is measured from +z; the azimuth φₐ is measured from +x toward +y in the x–y plane. The index a labels body 1 or 2.</p>
-    <p><strong>Misalignment criterion:</strong> cos θₐ = (Sₐ · J₀) / (|Sₐ| |J₀|). A nonzero spin is misaligned with the orbital axis when <strong>0° &lt; θₐ &lt; 180°</strong>, equivalently Sₐ × J₀ ≠ 0. The special values θₐ = 0° and 180° mean aligned and anti-aligned, respectively.</p>
-    <table class="table table-sm">
-      <thead><tr><th scope="col">Initial parameter</th><th scope="col">Body 1</th><th scope="col">Body 2</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Mass mₐ / M</th><td>0.6</td><td>0.4</td></tr>
-        <tr><th scope="row">Dimensionless spin χₐ</th><td>0.8</td><td>0.7</td></tr>
-        <tr><th scope="row">Spin magnitude |Sₐ| / (GM²/c)</th><td>0.288</td><td>0.112</td></tr>
-        <tr><th scope="row">Tilt θₐ from J₀</th><td>60°</td><td>110°</td></tr>
-        <tr><th scope="row">Azimuth φₐ</th><td>30°</td><td>135°</td></tr>
-      </tbody>
-    </table>
-    <p>Here M = m₁ + m₂ and χₐ = c|Sₐ|/(Gmₐ²). The initial spin components are Sₐ = |Sₐ|(sin θₐ cos φₐ, sin θₐ sin φₐ, cos θₐ). Both spins are misaligned. They are also initially noncoplanar with the orbital angular momentum: <strong>J₀ · (S₁ × S₂) ≠ 0</strong>. Noncoplanarity is an additional property of this chosen setup, not a requirement for spin misalignment. The angles in the table are initial values; the spin directions evolve when their couplings are enabled.</p>
-    <h3>Orbit and cycle convention</h3>
-    <p>This is an <strong>eccentric, conservative binary</strong>, with no radiation reaction. Units are G = c = M = 1. The Newtonian reference semimajor axis is a = 40 and eccentricity is e = 0.35. The initial relative position is r₀ = (26, 0, 0), and canonical momentum is p₀ = (0, 0.24√(1.35/26), 0). These are shared initial canonical data, not equal initial velocities or energies across the models. The reference e is not an identical relativistic eccentricity for all cases.</p>
-    <p>One radial cycle runs from a minimum of separation (periastron) to the next. The spatial orbit, spins, and orbital-plane orientation need not return to their initial values. Generic spin–orbit motion departs from the initial plane within the first cycle. Ten cycles make accumulated precession easier to see; they are not required for nonplanarity.</p>
-    <h3>Interactions in each case</h3>
-    <ol>
-      <li><strong>Newtonian:</strong> Newtonian orbital Hamiltonian only.</li>
-      <li><strong>Orbital 1PN:</strong> Newtonian plus 1PN orbital terms.</li>
-      <li><strong>Orbital 2PN:</strong> Newtonian, 1PN, and 2PN orbital terms.</li>
-      <li><strong>Spin–orbit 1.5PN:</strong> Newtonian and 1PN orbital terms plus leading spin–orbit coupling.</li>
-      <li><strong>Orbital 2PN plus spin–orbit:</strong> case 4 with the 2PN orbital term added.</li>
-      <li><strong>Mutual spin–spin:</strong> case 5 with the leading interaction between S₁ and S₂. Self-spin terms are deliberately omitted in this diagnostic case.</li>
-      <li><strong>Full conservative 2PN:</strong> case 6 plus both black-hole spin-induced quadrupole terms.</li>
-    </ol>
-    <p><strong>Cases 1–3:</strong> all spin couplings are switched off. The spin arrows are passive, fixed reference vectors; their misalignment does not make these orbital-only trajectories nonplanar. <strong>Cases 4–7:</strong> the spins evolve with the selected interactions.</p>
-    <h3>How to read the picture</h3>
-    <p>The shaded plane can have normal r × p (canonical plane) or r × ṙ (position–velocity plane). These generally differ with spin–orbit coupling. The reported orbital tilt refers to r × p. Body locations use the leading centre-of-mass split x₁ = 0.4r and x₂ = −0.6r, without higher-PN centre-of-mass corrections. Body sizes are enlarged. Each arrow has its own fixed display scale; compare its changes over time, not its length with another arrow. Precession angles and departures from the initial plane are not exaggerated.</p>
-    <p>The live energy, total-angular-momentum, and spin-length diagnostics check the displayed state. J orbital² and J orbital · S effective are conserved in cases 1–5; their variation can be physical in cases 6–7. The simulation evolves the selected truncated Hamiltonian numerically; it is not a full general-relativistic solution.</p>
-  </details>
   <style>
     #binary-2pn-motion { width:100%; color:var(--foreground); }
     #binary-2pn-motion canvas {display:block; width:100%; height:480px; touch-action:none; cursor:grab;}

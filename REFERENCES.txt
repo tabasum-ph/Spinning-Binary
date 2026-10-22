@@ -1,0 +1,77 @@
+LITERATURE REFERENCES FOR THE CONSERVATIVE BINARY ANIMATION
+
+The animation numerically evolves a selected conservative ADM Hamiltonian.
+The references below supply the physics or provide related analytical and
+numerical context. No animation or numerical dataset was copied from them.
+
+PRIMARY SOURCES FOR THE IMPLEMENTED PHYSICS
+
+1. Sashwat Tanay, Leo C. Stein, and Jose T. Galvez Ghersi
+   Integrability of eccentric, spinning black hole binaries up to second
+   post-Newtonian order (2021).
+   https://arxiv.org/abs/2012.06586
+   Full text: https://arxiv.org/html/2012.06586
+
+   Used for: canonical orbital and spin Poisson brackets, conservative
+   Hamiltonian through 2PN, and the interpretation of conserved quantities.
+   Relevant locations: Eq. (6); Eqs. (12)-(19); Sec. III after Eq. (20);
+   Sec. IV for perturbative integrability at 2PN.
+   Their effective spin is half the effective spin used in this animation.
+   Their L is our orbital J; their J is our total J.
+   Exact integrability of the truncated 1.5PN Hamiltonian must be
+   distinguished from perturbative integrability through full 2PN.
+
+2. C. Aykroyd, A. Bourgoin, and C. Le Poncin-Lafitte
+   Hamiltonian normal forms for the post-Newtonian binary problem.
+   https://arxiv.org/abs/2409.12204
+   Version used: https://arxiv.org/html/2409.12204v2
+
+   Used for: the nonspinning orbital Hamiltonian in the companion
+   mathematical draft and comparison of its 1PN and 2PN coefficients.
+   Relevant locations: Eqs. (33)-(34).
+   This is not a source for generic spinning-binary trajectories.
+
+3. Gerhard Schaefer and Piotr Jaranowski
+   Hamiltonian formulation of general relativity and post-Newtonian
+   dynamics of compact binaries (updated review, 2024).
+   https://doi.org/10.1007/s41114-024-00048-7
+
+   Used for: leading spin-orbit, mutual spin-spin, and spin-induced
+   quadrupole Hamiltonians in the companion mathematical draft.
+   Relevant locations: Eqs. (7.72)-(7.74).
+   The self-spin terms in the animation use black-hole quadrupole values.
+
+RELATED WORK AND READING
+
+4. Gihyuk Cho and Hyung Mok Lee
+   Analytic Keplerian-type parametrization for general spinning compact
+   binaries with the leading order spin-orbit interaction (2019).
+   https://arxiv.org/abs/1908.02927
+
+   Relevance: analytical orbital motion and spin precession for generic
+   spin directions and eccentricity; Secs. II-III.
+   Scope: Eq. (2.1) retains Newtonian orbital motion and leading spin-orbit
+   coupling. The authors deliberately omit the 1PN orbital correction.
+   Our case 4 includes that correction. The animation does not implement
+   their analytical solution; it integrates Hamilton's equations.
+
+5. Michael D. Hartl and Alessandra Buonanno
+   The dynamics of precessing binary black holes using the post-Newtonian
+   approximation (2005).
+   https://arxiv.org/abs/gr-qc/0407091
+   https://doi.org/10.1103/PhysRevD.71.024027
+
+   Relevance: numerical conservative dynamics including spin-orbit,
+   spin-spin, and mass-monopole/spin-induced-quadrupole interactions,
+   for quasi-circular and eccentric configurations.
+   This provides context for numerical studies; its code or trajectories
+   were not used to generate this animation.
+
+IMPLEMENTATION AND SCOPE
+
+The seven-case selection, initial masses and spins, eccentric initial data,
+RK4 integration, frame reconstruction, controls, and conservation diagnostics
+are implementation choices for this illustration, not results attributed to
+these papers. Numerical checks test the implementation for the chosen setup;
+they do not establish the accuracy of the PN approximation to full general
+relativity. The animation does not evaluate a one-cycle Magnusian.

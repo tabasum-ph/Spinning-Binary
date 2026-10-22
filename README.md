@@ -8,7 +8,7 @@ The purpose is to understand what each Hamiltonian contribution changes: periast
 
 [Open the interactive animation](./index.html)
 
-For the shared repository, upload `binary-contributions.html` as `index.html` beside this README. The link runs the animation when viewed on the published website; on GitHub's repository page it opens the file view. Use the repository's published website address to share the running animation.
+For the shared repository, upload `index.html`, `README.md`, and `REFERENCES.txt` together in the repository root. The link runs the animation when viewed on the published website; on GitHub's repository page it opens the file view. Use the repository's published website address to share the running animation.
 
 Alternatively, download `index.html` and open it in a modern browser. No Python, LaTeX, or numerical data download is required: the motion data and simulation code are embedded in the page.
 
@@ -19,7 +19,7 @@ Alternatively, download `index.html` and open it in a modern browser. No Python,
 - Move the time slider to inspect a particular state.
 - Choose **one, five, or ten radial cycles**.
 - Select the **canonical** or **position–velocity** shaded plane.
-- Read the live diagnostics below the picture and the detailed setup panel.
+- Read the live diagnostics below the picture; the setup and physical assumptions are explained in this README.
 
 One radial cycle means a periastron-to-periastron interval: from one minimum of separation to the next. It does not mean that the full spatial orbit or spin configuration returns to its initial state. Ten cycles make accumulated precession easier to see; nonplanarity does not require waiting ten cycles.
 
@@ -93,6 +93,7 @@ Further limitations:
 
 ## References
 
-- **Tanay, Stein and Gálvez Ghersi**, *Integrability of eccentric, spinning black hole binaries up to second post-Newtonian order*. Sections II–IV give the Hamiltonian, Poisson structure, and integrability discussion. Their effective-spin convention is half the one used here. [arXiv:2012.06586](https://arxiv.org/html/2012.06586)
-- **Cho and Lee**, *Analytic Keplerian-type parametrization for general spinning compact binaries with the leading order spin-orbit interaction*. An analytical treatment of precessing eccentric motion; their displayed Hamiltonian deliberately omits the 1PN orbital correction. [arXiv:1908.02927](https://arxiv.org/abs/1908.02927)
-- **Hartl and Buonanno**, *The dynamics of precessing binary black holes using the post-Newtonian approximation*. Numerical conservative dynamics including spin–orbit, spin–spin, and spin-induced quadrupole interactions. [arXiv:gr-qc/0407091](https://arxiv.org/abs/gr-qc/0407091)
+See [REFERENCES.txt](./REFERENCES.txt) for the literature used to construct
+and check the physical model, relevant equations, notation conventions,
+and related analytical and numerical work. The list distinguishes direct
+physics sources from background reading.
